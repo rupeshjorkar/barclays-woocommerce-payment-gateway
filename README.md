@@ -3,8 +3,8 @@ Contributors: c-metric
 Donate link: 
 Tags: Payment Gateway, cybersource, Barclays, kenya, E-commerce
 Requires at least: 4.0
-Tested up to: 5.3.1
-Stable tag: 4.3
+Tested up to: 6.8
+Stable tag: 1.2
 License: GPLv2 or later
 License URI: 
 
@@ -37,3 +37,5 @@ This section describes how to install the plugin and get it working.
 New version of CyberSource Barclays Payment Gateway for WooCommerce Shop Site kenya.
 = 1.1 =
 Update files namming
+= 1.2 =
+* First Release

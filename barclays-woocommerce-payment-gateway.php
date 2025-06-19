@@ -6,7 +6,7 @@
  * Description: Barclays WooCommerce Payment Gateway to WooCommerce shop website.
  * Author: Rupesh Jorkar (RJ)
  * Author URI: 
- * Version: 1.1
+ * Version: 1.2
  * License: 
  * License URI: 
  */
@@ -14,18 +14,24 @@
 if ( ! defined( 'ABSPATH' ) ) exit; // Exit if accessed directly
 
 if ( ! defined( 'BarclaysWooCommerce_DB_VERSION' ) ) {
-      define( 'BarclaysWooCommerce_DB_VERSION', '1.1' );
+      define( 'BarclaysWooCommerce_DB_VERSION', '1.2' );
 	define( 'BarclaysWooCommerce_PLUGIN_DIR', dirname( __FILE__ ) );
 }  
 
 //update plugin code start
 require 'plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
 
-$myUpdateChecker = Puc_v4_Factory::buildUpdateChecker(
-	'http://c-metric.net/plugins/barclaysWooCommercePaymentGateway/barclaysWooCommerce.json',
+$myUpdateChecker = PucFactory::buildUpdateChecker(
+	'https://github.com/rupeshjorkar/barclays-woocommerce-payment-gateway',
 	__FILE__,
-	'barclaysWooCommercePaymentGateway-c-metric'
+	'ignit-resource-rest-api'
 );
+
+//Set the branch that contains the stable release.
+$myUpdateChecker->setBranch('main');
+
+
 $GLOBALS['wc_cybersource_barclays'] = new WC_Cybersource_Barclays();
 
 
