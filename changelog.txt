@@ -1,0 +1,6 @@
+*** BarclaysWooCommercePaymentGateway Change log ***
+
+Dec-2019 - version 1.0
+ * BarclaysWooCommercePaymentGateway Plugin first Release
+Version 1.1
+ * Update files name and version 
